@@ -1,0 +1,22 @@
+---
+layout: layouts/sablona__hlavni.njk
+title: blog
+---
+<section class="blog">
+<div class="blog__photo">
+<h1>BLOG OTCE JIŘÍHO</h1>
+</div>  
+{% for prispevek in collections.blog %}
+<div class="clanek">
+    <img src="/img/{{prispevek.data.foto}}" alt="{{prispevek.data.alt}}">
+    <div class="clanek__popis">
+
+<h2>
+    {{prispevek.data.title}}
+</h2>
+<p class="perex">{{prispevek.data.perex}}</p>
+<p> <a class="all" href="{{prispevek.url}}">Celý článek</a></p>
+</div>
+</div>
+{% endfor %}
+</section>

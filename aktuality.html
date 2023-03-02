@@ -1,0 +1,22 @@
+---
+layout: layouts/sablona__hlavni.njk
+title: aktuality
+---
+<section class="actual">
+<div class="actual__photo">
+<h1>AKTUALITY</h1>
+</div>  
+{% for aktualita in collections.aktuality %}
+<div class="clanek">
+    <img src="/img/{{aktualita.data.foto}}" alt="{{aktualita.data.alt}}">
+    <div class="clanek__popis">
+
+<h2>
+    {{aktualita.data.title}}
+</h2>
+<p class="perex">{{aktualita.data.perex}}</p>
+<p> <a class="all" href="{{aktualita.url}}">O události</a></p>
+</div>
+</div>
+{% endfor %}
+</section>

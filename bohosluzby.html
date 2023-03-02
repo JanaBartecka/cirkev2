@@ -1,0 +1,19 @@
+---
+layout: layouts/sablona__hlavni.njk
+title: Bohoslužby
+---
+<section class="servis">  
+    <div class="servis__title__photo">
+        <h1 class="servis__title__h2">BOHOSLUŽBY</h1>
+        </div>
+{% for rozpis in collections.bohosluzby %}
+        <div class="servis__wednesday">
+            <p class="wednesday__time">
+                Pravidelná NEDĚLNÍ LITURGIE <br> OD 10 H <br>dále dle měsíčního rozpisu níže
+            </p>
+        </div>  
+        <div class="servis__time">
+            <img class="time__table" src="/img/{{rozpis.data.foto}}" alt="{{rozpis.data.alt}}">
+        </div>
+{% endfor %}
+</section>

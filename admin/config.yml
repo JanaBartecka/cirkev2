@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "img/uploads"
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "blog"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/sablona__blog.njk"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "blog"}
+      - {label: "Titulek", name: "title", widget: "string"}
+      - {label: "Datum publikace", name: "date", widget: "datetime"}
+      - {label: "Obrázek", name: "foto", widget: "image", required: false }
+      - {label: "Perex", name: "perex", widget: "string"}
+      - {label: "Obsah", name: "body", widget: "markdown"}
+  - name: "aktuality"
+    label: "Aktuality"
+    folder: "aktuality"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/sablona__blog.njk"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "aktuality"}
+      - {label: "Titulek", name: "title", widget: "string"}
+      - {label: "Datum publikace", name: "date", widget: "datetime"}
+      - {label: "Obrázek", name: "foto", widget: "image", required: false }
+      - {label: "Perex", name: "perex", widget: "string"}
+      - {label: "Obsah", name: "body", widget: "markdown"}
+  - name: "galerie"
+    label: "Galerie"
+    folder: "galerie"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/sablona__galerie.njk"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "galerie"}
+      - {label: "Titulek", name: "title", widget: "string"}
+      - {label: "Obrázek", name: "foto", widget: "image", required: false }
+  - name: "bohosluzby"
+    label: "Bohosluzby"
+    folder: "bohosluzby"
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/sablona__bohosluzby.njk"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "bohosluzby"}
+      - {label: "Rozpis", name: "foto", widget: "image", required: false }

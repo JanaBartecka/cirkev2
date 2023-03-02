@@ -1,0 +1,25 @@
+
+{% include "partials/header.njk" %} 
+{% include "partials/menu.njk" %}
+<section class="gallery__photo">
+    <div class="gallery__name">
+        <h1>{{ title }}</h1>
+      </div>
+      
+      <div class="gallery__grid">
+        <img class="grid__photo" src="/img/{{ photo }}" alt="{{ alt }}">
+        <img class="grid__photo" src="/img/{{ photo2 }}" alt="{{ alt2 }}">
+        <img class="grid__photo" src="/img/{{ photo3 }}" alt="{{ alt3 }}">
+        <img class="grid__photo" src="/img/{{ photo4 }}" alt="{{ alt4 }}">
+        <img class="grid__photo" src="/img/{{ photo5 }}" alt="{{ alt5 }}">
+        <img class="grid__photo" src="/img/{{ photo6 }}" alt="{{ alt6 }}">
+        <img class="grid__photo" src="/img/{{ photo7 }}" alt="{{ alt7 }}">
+      </div>
+      
+    </section>
+
+{% include "partials/contact.njk" %}
+{% include "partials/footer.njk" %} 
+ <script src="/js/script.js"></script>   
+</body>
+</html>

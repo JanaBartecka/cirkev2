@@ -1,0 +1,21 @@
+---
+layout: layouts/sablona__hlavni.njk
+title: galerie
+---
+
+    <div class="galery__photo">
+        <h1>GALERIE</h1>
+    </div>
+    <section class="galery">
+    {% for fotky in collections.galerie %}
+    
+    <div class="galery__grid">
+        <div class="galery__box">
+            <a href="{{fotky.url}}">
+        <img class="galery__title__photo" src="/img/{{fotky.data.photo1}}" alt="{{fotky.data.alt}}">
+        <p class="galery__text">{{fotky.data.title}}</p></a>
+    </div>    
+    </div>
+
+{% endfor %}
+</section>
