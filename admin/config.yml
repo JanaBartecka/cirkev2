@@ -12,5 +12,10 @@ collections:
     create: true
     slug: "{{year}}{{month}}{{day}}_{{slug}}"
     fields:
-      - {label: "tags", name: "tags", widget: "hidden", default: "blog"}
-      - {label: "Text", name: "body", widget: "markdown"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/sablona__blog.njk"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "blog"}
+      - {label: "Titulek", name: "title", widget: "string"}
+      - {label: "Datum publikace", name: "date", widget: "datetime"}
+      - {label: "Obrázek", name: "foto", widget: "image", required: false }
+      - {label: "Perex", name: "perex", widget: "string"}
+      - {label: "Obsah", name: "body", widget: "markdown"}
